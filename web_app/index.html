@@ -1,95 +1,7 @@
-new file mode 100644
-<!DOCTYPE html>
-<html lang="ru">
-<head>
+<div class="modal-body">
+<label id="label-model" for="select-model">Модель AI:</label>
+<select id="select-model" class="select-model">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>AI-ВЕТЕРИНАР</title>
-<link rel="stylesheet" href="style.css">
-<script src="https://telegram.org/js/telegram-web-app.js"></script>
-
-</head>
-<body>
-
-<!-- Экран выбора специализации -->
-<div id="screen-specializations" class="screen active">
-text
-  <div class="header">
-text
-      <h1 id="header-title">🐾 AI-ВЕТЕРИНАР</h1>
-text
-      <div class="lang-switch">
-text
-          <button class="lang-btn active" data-lang="ru">RU</button>
-text
-          <button class="lang-btn" data-lang="en">EN</button>
-text
-      </div>
-text
-  </div>
-text
-  <p id="subtitle" class="subtitle">Выберите специализацию врача:</p>
-text
-  <div id="spec-grid" class="spec-grid">
-text
-      <!-- Карточки генерируются в JS -->
-text
-  </div>
-</div>
-<!-- Экран чата -->
-<div id="screen-chat" class="screen">
-text
-  <div class="chat-header">
-text
-      <button id="btn-back" class="btn-icon" title="Назад">←</button>
-text
-      <div class="chat-header-info">
-text
-          <span id="chat-spec-icon"></span>
-text
-          <span id="chat-spec-name"></span>
-text
-      </div>
-text
-      <button id="btn-settings" class="btn-icon" title="Настройки">⚙️</button>
-text
-  </div>
-text
-  <div id="chat-messages" class="chat-messages">
-text
-      <!-- Сообщения -->
-text
-  </div>
-text
-  <div class="chat-input-area">
-text
-      <input type="text" id="chat-input" placeholder="Опишите симптомы..." autocomplete="off">
-text
-      <button id="btn-send" class="btn-send" title="Отправить">✈️</button>
-text
-  </div>
-</div>
-<!-- Модальное окно настроек -->
-<div id="modal-settings" class="modal hidden">
-text
-  <div class="modal-overlay"></div>
-text
-  <div class="modal-content">
-text
-      <div class="modal-header">
-text
-          <h2 id="settings-title">⚙️ Настройки</h2>
-text
-          <button id="btn-close-settings" class="btn-icon">✕</button>
-text
-      </div>
-text
-      <div class="modal-body">
-text
-          <label id="label-model" for="select-model">Модель AI:</label>
-text
-          <select id="select-model" class="select-model">
 text
               <option value="openai">OpenAI GPT</option>
 text
@@ -99,58 +11,8 @@ text
 text
               <option value="gemini">Gemini</option>
 text
+              <!-- Модели загружаются динамически из API -->
           </select>
-text
-          <label id="label-lang" for="select-lang-settings">Язык / Language:</label>
-text
-          <select id="select-lang-settings" class="select-model">
-text
-              <option value="ru">Русский</option>
-text
-              <option value="en">English</option>
-text
-          </select>
-text
-          <button id="btn-clear-history" class="btn-danger">🗑 Очистить историю чата</button>
-text
-          <div class="pollinations-credit">
-text
-              <span>🌸</span> Powered by <a href="https://pollinations.ai" target="_blank">Pollinations.ai</a>
-text
-          </div>
-text
-      </div>
-text
-  </div>
-</div>
-<!-- Нижняя навигация -->
-<nav id="bottom-nav" class="bottom-nav">
-text
-  <button class="nav-btn active" data-screen="specializations">
-text
-      <span class="nav-icon">🏠</span>
-text
-      <span class="nav-label" data-i18n="nav_home">Главная</span>
-text
-  </button>
-text
-  <button class="nav-btn" data-screen="chat">
-text
-      <span class="nav-icon">💬</span>
-text
-      <span class="nav-label" data-i18n="nav_chat">Чат</span>
-text
-  </button>
-text
-  <button class="nav-btn" data-screen="settings">
-text
-      <span class="nav-icon">⚙️</span>
-text
-      <span class="nav-label" data-i18n="nav_settings">Настройки</span>
-text
-  </button>
-</nav>
-<script src="script.js"></script>
 
-</body>
-</html>
+          <label id="label-lang" for="select-lang-settings">Язык / Language:</label>
+          <select id="select-lang-settings" class="select-model">
